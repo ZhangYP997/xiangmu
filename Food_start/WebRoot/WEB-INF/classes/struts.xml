@@ -15,6 +15,11 @@
 <action name="houMenu_*" class="com.aaa.action.HouMenuAction" method="{1}">
 	<result name="to_type">/houtai/Menu/foodtype.jsp</result>
 </action>
+<!-- 菜品 -->
+<action name="houDish_*" class="com.aaa.action.DishAction" method="{1}">
+	<result name="to_findAllDish" type="redirectAction">houDish_findAllDish.action</result>
+	<result name="showdish">/houtai/Menu/foodinfo.jsp</result>
+</action>
  <!-- 前台点菜页面 -->
  <action name="Dian_*" class="com.aaa.action.QianCaiAction" method="{1}">
  	<result name="to_cai" type="redirectAction">Dian_caiping.action</result>
