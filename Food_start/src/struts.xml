@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="hehu" extends="struts-default" >
+
+	<action name="FuUser_*" class="com.aaa.action.FuUserAction" method="{1}">
+		<result name="to_edit">/houtai/Role/edit.jsp</result>
+	</action>
+
+<!-- 前台用户注册 -->
+<action name="QianUser_*" class="com.aaa.action.QianUserAction" method="{1}">
+<result name="to_login">/Qiantai/logon.jsp</result>
+</action>
+<!-- 菜品种类添加 -->
+<action name="houMenu_*" class="com.aaa.action.HouMenuAction" method="{1}">
+	<result name="to_type">/houtai/Menu/foodtype.jsp</result>
+</action>
+ <!-- 前台点菜页面 -->
+ <action name="Dian_*" class="com.aaa.action.QianCaiAction" method="{1}">
+ 	<result name="to_cai" type="redirectAction">Dian_caiping.action</result>
+ 	<result name="to_diancai">/Qiantai/dianchan.jsp</result>
+ </action>
+
+</package>
+</struts>    
